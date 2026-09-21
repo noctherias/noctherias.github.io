@@ -1205,3 +1205,278 @@ h1 em {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* ===== Gengar Smoke / Fog Integration ===== */
+
+.gengar-stage {
+  isolation: isolate;
+  overflow: visible;
+}
+
+.gengar-stage::before,
+.gengar-stage::after {
+  content: "";
+  position: absolute;
+  inset: 6%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gengar-stage::before {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(126,34,206,.18), transparent 34%),
+    radial-gradient(circle at 50% 68%, rgba(244,114,182,.08), transparent 48%);
+  filter: blur(18px);
+  animation: stageMistPulse 6.5s ease-in-out infinite;
+}
+
+.gengar-stage::after {
+  z-index: 6;
+  inset: auto 16% 8%;
+  height: 16%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.06) 0%, rgba(192,132,252,.10) 18%, rgba(126,34,206,.08) 34%, transparent 72%);
+  filter: blur(14px);
+  opacity: .9;
+}
+
+@keyframes stageMistPulse {
+  0%, 100% { transform: scale(1); opacity: .78; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+.gengar-backlight {
+  z-index: 1;
+}
+
+.gengar {
+  z-index: 5;
+}
+
+.gengar-fog-ring {
+  position: absolute;
+  z-index: 4;
+  inset: 10%;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 24%, rgba(216,180,254,.05) 34%, rgba(216,180,254,.10) 42%, rgba(126,34,206,.06) 50%, transparent 67%);
+  filter: blur(10px);
+  mix-blend-mode: screen;
+  animation: fogRingRotate 18s linear infinite;
+}
+
+@keyframes fogRingRotate {
+  to { transform: rotate(360deg); }
+}
+
+.smoke-layer {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 36% 40%, rgba(255,255,255,.10), rgba(216,180,254,.09) 18%, rgba(126,34,206,.15) 36%, rgba(76,29,149,.08) 52%, transparent 74%);
+  filter: blur(18px);
+  opacity: .85;
+  transform-origin: center;
+}
+
+.gengar-smoke::before,
+.gengar-smoke::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 45%, rgba(255,255,255,.08), rgba(216,180,254,.06) 18%, rgba(126,34,206,.12) 40%, transparent 75%);
+  filter: blur(10px);
+}
+
+.gengar-smoke::before {
+  width: 52%;
+  height: 52%;
+  left: -10%;
+  top: 18%;
+}
+
+.gengar-smoke::after {
+  width: 38%;
+  height: 38%;
+  right: -8%;
+  bottom: 16%;
+}
+
+.smoke-back {
+  z-index: 2;
+  opacity: .64;
+  mix-blend-mode: screen;
+}
+
+.smoke-front {
+  z-index: 7;
+  opacity: .82;
+}
+
+.smoke-back-a {
+  width: 54%;
+  height: 30%;
+  left: 12%;
+  top: 22%;
+  animation: smokeBackDriftA 13s ease-in-out infinite;
+}
+
+.smoke-back-b {
+  width: 58%;
+  height: 26%;
+  right: 8%;
+  top: 40%;
+  animation: smokeBackDriftB 16s ease-in-out -3s infinite;
+}
+
+.smoke-front-a {
+  width: 62%;
+  height: 24%;
+  left: 3%;
+  bottom: 15%;
+  animation: smokeFrontDriftA 10s ease-in-out infinite;
+}
+
+.smoke-front-b {
+  width: 54%;
+  height: 22%;
+  right: 2%;
+  bottom: 20%;
+  animation: smokeFrontDriftB 12s ease-in-out -2s infinite;
+}
+
+.smoke-front-c {
+  width: 46%;
+  height: 18%;
+  left: 26%;
+  bottom: 6%;
+  opacity: .92;
+  animation: smokeFrontDriftC 11s ease-in-out -1.4s infinite;
+}
+
+@keyframes smokeBackDriftA {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(-2deg); opacity: .56; }
+  50% { transform: translate(18px, -8px) scale(1.08) rotate(3deg); opacity: .76; }
+}
+
+@keyframes smokeBackDriftB {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(4deg); opacity: .48; }
+  50% { transform: translate(-14px, 10px) scale(1.12) rotate(-2deg); opacity: .7; }
+}
+
+@keyframes smokeFrontDriftA {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: .7; }
+  50% { transform: translate(12px, -10px) scale(1.1) rotate(4deg); opacity: .94; }
+}
+
+@keyframes smokeFrontDriftB {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: .62; }
+  50% { transform: translate(-16px, -8px) scale(1.08) rotate(-4deg); opacity: .88; }
+}
+
+@keyframes smokeFrontDriftC {
+  0%, 100% { transform: translateY(0) scale(1); opacity: .78; }
+  50% { transform: translateY(-12px) scale(1.12); opacity: 1; }
+}
+
+.mist-puffs {
+  position: absolute;
+  inset: auto 0 7%;
+  height: 25%;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.mist-puff {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 45% 42%, rgba(255,255,255,.11), rgba(216,180,254,.08) 18%, rgba(126,34,206,.10) 42%, rgba(76,29,149,.06) 56%, transparent 74%);
+  filter: blur(12px);
+  opacity: .88;
+}
+
+.puff-a {
+  left: 6%;
+  width: 23%;
+  height: 64%;
+  animation: puffRiseA 7s ease-in-out infinite;
+}
+
+.puff-b {
+  left: 22%;
+  width: 26%;
+  height: 70%;
+  animation: puffRiseB 8s ease-in-out -2s infinite;
+}
+
+.puff-c {
+  left: 42%;
+  width: 22%;
+  height: 64%;
+  animation: puffRiseC 7.5s ease-in-out -1s infinite;
+}
+
+.puff-d {
+  left: 58%;
+  width: 28%;
+  height: 76%;
+  animation: puffRiseB 8.5s ease-in-out -3.2s infinite;
+}
+
+.puff-e {
+  right: 5%;
+  width: 24%;
+  height: 62%;
+  animation: puffRiseA 7.8s ease-in-out -1.7s infinite;
+}
+
+@keyframes puffRiseA {
+  0%, 100% { transform: translateY(0) scale(1); opacity: .74; }
+  50% { transform: translateY(-10px) scale(1.08); opacity: .96; }
+}
+
+@keyframes puffRiseB {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: .68; }
+  50% { transform: translateY(-14px) translateX(8px) scale(1.12); opacity: .92; }
+}
+
+@keyframes puffRiseC {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: .72; }
+  50% { transform: translateY(-12px) translateX(-8px) scale(1.1); opacity: .94; }
+}
+
+.gengar-reflection {
+  z-index: 3;
+}
+
+@media (max-width: 760px) {
+  .smoke-back-a,
+  .smoke-back-b,
+  .smoke-front-a,
+  .smoke-front-b,
+  .smoke-front-c {
+    filter: blur(14px);
+  }
+
+  .mist-puffs {
+    inset: auto 4% 8%;
+    height: 22%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gengar-stage::before,
+  .gengar-fog-ring,
+  .smoke-layer,
+  .mist-puff {
+    animation: none !important;
+  }
+}
