@@ -66,7 +66,6 @@ heroArt?.addEventListener("pointerleave", () => {
 });
 
 const artwork = document.getElementById("gengarArtwork");
-const imageFallback = document.getElementById("imageFallback");
 
 let switchedToRemote = false;
 
@@ -78,7 +77,6 @@ artwork.addEventListener("error", () => {
   }
 
   artwork.style.opacity = "0";
-  imageFallback.hidden = false;
 });
 
 function escapeHtml(value = "") {

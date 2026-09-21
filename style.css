@@ -664,14 +664,6 @@ h1 em {
   letter-spacing: .14em;
 }
 
-.footer > :last-child {
-  justify-self: end;
-  transition: color .2s ease;
-}
-
-.footer > :last-child:hover {
-  color: #a99db6;
-}
 
 .footer-center {
   justify-self: center;
@@ -962,24 +954,6 @@ h1 em {
   font-size: .7rem;
 }
 
-.image-fallback {
-  position: fixed;
-  z-index: 70;
-  right: 18px;
-  bottom: 18px;
-  padding: 12px 14px;
-  display: grid;
-  gap: 3px;
-  border: 1px solid rgba(251,113,133,.22);
-  border-radius: 12px;
-  background: rgba(15,6,18,.92);
-  color: #cdbfd6;
-  font-size: .65rem;
-}
-
-.image-fallback span {
-  color: #7f7089;
-}
 
 @media (max-width: 1050px) {
   .shell {
@@ -1081,7 +1055,7 @@ h1 em {
   }
 
   .footer {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     font-size: .49rem;
   }
 
