@@ -1,6 +1,6 @@
 # Noctherias — Dark Cosmic Purple GitHub Page
 
-Eine moderne, responsive GitHub-Pages-Startseite im Dark-Cosmic-Purple-Stil.
+Eine moderne, responsive GitHub-Pages-Startseite im Dark-Cosmic-Purple-Stil mit subtil dämonischer und okkulter Ästhetik.
 
 ## Dateien
 

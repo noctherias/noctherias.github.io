@@ -786,3 +786,285 @@ footer strong {
     font-size: .88rem;
   }
 }
+
+
+/* ===== Noctherias Demonic Pass ===== */
+
+:root {
+  --hell-red: #7f1d1d;
+  --hell-glow: rgba(190, 24, 93, .28);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% -10%, rgba(88, 28, 135, 0.42), transparent 34rem),
+    radial-gradient(circle at 82% 4%, rgba(127, 29, 29, 0.16), transparent 28rem),
+    radial-gradient(circle at 52% 92%, rgba(76, 5, 25, .13), transparent 34rem),
+    linear-gradient(180deg, #07020c 0%, #050207 38%, #030104 100%);
+}
+
+.site-header {
+  border-color: rgba(216, 180, 254, .12);
+  box-shadow:
+    0 10px 45px rgba(0,0,0,.36),
+    0 0 30px rgba(91,33,182,.08);
+}
+
+.brand {
+  text-shadow: 0 0 18px rgba(192,132,252,.16);
+}
+
+.brand-mark svg {
+  filter:
+    drop-shadow(0 0 10px rgba(192,132,252,.38))
+    drop-shadow(0 0 18px rgba(127,29,29,.18));
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 8% -10% 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 72% 42%, rgba(126,34,206,.16), transparent 28%),
+    radial-gradient(circle at 72% 42%, rgba(127,29,29,.10), transparent 46%);
+  filter: blur(10px);
+}
+
+.hero-copy::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 6px;
+  width: 2px;
+  height: 82px;
+  background: linear-gradient(180deg, transparent, #c084fc, #7f1d1d, transparent);
+  box-shadow: 0 0 18px rgba(192,132,252,.35);
+}
+
+.eyebrow {
+  color: #f0abfc;
+  text-shadow: 0 0 16px rgba(217,70,239,.28);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #f5d0fe 16%,
+    #c084fc 38%,
+    #7c3aed 64%,
+    #be185d 86%,
+    #fecdd3 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 30px rgba(126,34,206,.18));
+}
+
+.btn-primary {
+  background:
+    linear-gradient(135deg, #6d28d9 0%, #4c1d95 52%, #581c2b 100%);
+  border-color: rgba(244,114,182,.25);
+  box-shadow:
+    0 14px 36px rgba(76,29,149,.34),
+    0 0 24px rgba(127,29,29,.12),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.btn-primary:hover {
+  border-color: rgba(251,113,133,.42);
+  box-shadow:
+    0 18px 48px rgba(76,29,149,.44),
+    0 0 32px rgba(190,24,93,.16);
+}
+
+.hero-meta i {
+  background: #fb7185;
+  box-shadow: 0 0 15px rgba(251,113,133,.9);
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.ritual-circle {
+  position: absolute;
+  width: min(500px, 94vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(192,132,252,.08);
+  border-radius: 50%;
+  opacity: .7;
+  animation: ritualSpin 38s linear infinite;
+}
+
+.ritual-circle::before,
+.ritual-circle::after {
+  content: "";
+  position: absolute;
+  inset: 7%;
+  border: 1px solid rgba(127,29,29,.09);
+  border-radius: 50%;
+}
+
+.ritual-circle::after {
+  inset: 18%;
+  border-color: rgba(192,132,252,.09);
+  transform: rotate(45deg);
+}
+
+@keyframes ritualSpin {
+  to { transform: rotate(360deg); }
+}
+
+.sigil {
+  position: absolute;
+  color: rgba(233,213,255,.46);
+  font-size: 1.1rem;
+  text-shadow: 0 0 14px rgba(192,132,252,.26);
+}
+
+.sigil-a { top: 2%; left: 49%; }
+.sigil-b { right: 1%; top: 47%; color: rgba(251,113,133,.46); }
+.sigil-c { bottom: 2%; left: 49%; }
+.sigil-d { left: 0; top: 47%; }
+
+.orb-shell::after {
+  content: "";
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0 12%,
+      rgba(192,132,252,.05) 13% 14%,
+      transparent 15% 31%,
+      rgba(127,29,29,.07) 32% 33%,
+      transparent 34% 100%
+    );
+  animation: reverseSigil 24s linear infinite;
+}
+
+@keyframes reverseSigil {
+  to { transform: rotate(-360deg); }
+}
+
+.orb {
+  border-color: rgba(233,213,255,.24);
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255,255,255,.5), transparent 7%),
+    radial-gradient(circle at 40% 32%, #c084fc 0%, #6d28d9 24%, #3b0764 56%, #21020c 100%);
+  box-shadow:
+    inset -30px -34px 74px rgba(0,0,0,.58),
+    inset 16px 18px 50px rgba(255,255,255,.05),
+    0 0 80px rgba(139,92,246,.34),
+    0 0 140px rgba(127,29,29,.14);
+}
+
+.orb::after {
+  content: "";
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 28% 36%, transparent 0 2px, rgba(0,0,0,.20) 3px 4px, transparent 5px),
+    radial-gradient(circle at 66% 58%, transparent 0 2px, rgba(0,0,0,.18) 3px 4px, transparent 5px);
+  opacity: .5;
+}
+
+.orb-sigil {
+  display: grid;
+  place-items: center;
+  line-height: .8;
+}
+
+.orb-sigil span {
+  display: block;
+}
+
+.orb-sigil small {
+  display: block;
+  margin-top: 5px;
+  font-size: .27em;
+  color: #fda4af;
+  text-shadow: 0 0 18px rgba(244,63,94,.8);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(139,92,246,.07), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(127,29,29,.08), transparent 24%);
+  opacity: .8;
+}
+
+.project-card::after {
+  content: "⛧";
+  position: absolute;
+  right: 18px;
+  bottom: 8px;
+  font-size: 3.2rem;
+  color: rgba(192,132,252,.025);
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  color: rgba(244,114,182,.05);
+}
+
+.project-icon {
+  color: #f0abfc;
+  border-color: rgba(244,114,182,.16);
+  background:
+    linear-gradient(145deg, rgba(139,92,246,.13), rgba(127,29,29,.08));
+}
+
+.section-kicker {
+  color: #d8b4fe;
+}
+
+.tech-pill {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-pill::after {
+  content: "";
+  position: absolute;
+  inset: auto 16% 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244,114,182,.25), transparent);
+}
+
+.cta-card {
+  border-color: rgba(244,114,182,.18);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(139,92,246,.18), transparent 32%),
+    radial-gradient(circle at 88% 72%, rgba(127,29,29,.12), transparent 28%),
+    linear-gradient(120deg, rgba(46,16,80,.90), rgba(12,4,16,.92));
+}
+
+footer strong {
+  text-shadow: 0 0 14px rgba(192,132,252,.18);
+}
+
+@media (max-width: 760px) {
+  .hero-copy::before {
+    display: none;
+  }
+
+  .ritual-circle {
+    width: min(380px, 88vw);
+  }
+}
