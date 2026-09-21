@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090510">
+  <meta name="description" content="Noctherias – Projekte, Tools und Experimente aus der Nacht.">
+  <title>Noctherias — Dark Cosmic Purple</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="stars stars-a"></div>
+  <div class="stars stars-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Noctherias Startseite">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img">
+          <defs>
+            <linearGradient id="markGradient" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#d3a6ff"/>
+              <stop offset="55%" stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#4c1d95"/>
+            </linearGradient>
+          </defs>
+          <path d="M18 12c3 8 7 12 14 13 7-1 11-5 14-13 3 8 5 16 3 24-2 11-9 18-17 18S17 47 15 36c-2-8 0-16 3-24Z" fill="none" stroke="url(#markGradient)" stroke-width="3.2"/>
+          <path d="M23 34c3-4 6-6 9-6s6 2 9 6" fill="none" stroke="#d8b4fe" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="25" cy="39" r="2" fill="#c084fc"/>
+          <circle cx="39" cy="39" r="2" fill="#c084fc"/>
+        </svg>
+      </span>
+      <span>NOCTHERIAS</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav" aria-label="Hauptnavigation">
+      <a href="#about">Über mich</a>
+      <a href="#projects">Projekte</a>
+      <a href="#stack">Tech</a>
+      <a href="https://github.com/noctherias" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="aurora aurora-one"></div>
+      <div class="aurora aurora-two"></div>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow">ENTER THE NIGHT</p>
+        <h1>
+          Ich baue Dinge<br>
+          <span class="gradient-text">zwischen Code und Kosmos.</span>
+        </h1>
+        <p class="hero-text">
+          Noctherias ist mein digitales Nachtlabor für Software, Automatisierung,
+          Tools und Projekte mit einem dunklen, kosmischen Einschlag.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Projekte ansehen</a>
+          <a class="btn btn-ghost" href="https://github.com/noctherias" target="_blank" rel="noreferrer">
+            GitHub öffnen
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span><i></i> Online</span>
+          <span>github.com/noctherias</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="orb-shell">
+          <div class="orb-ring ring-one"></div>
+          <div class="orb-ring ring-two"></div>
+          <div class="orb">
+            <div class="orb-core"></div>
+            <div class="orb-sigil">N</div>
+          </div>
+          <span class="satellite sat-a"></span>
+          <span class="satellite sat-b"></span>
+          <span class="satellite sat-c"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section split-section">
+      <div class="section-kicker reveal">01 / IDENTITÄT</div>
+      <div class="about-grid">
+        <div class="reveal">
+          <h2>Gebaut für die Nacht.</h2>
+        </div>
+        <div class="reveal">
+          <p>
+            Der Name <strong>Noctherias</strong> verbindet Nacht, Dunkelheit und eine leicht
+            teuflische Ästhetik. Die Seite greift genau das auf: tiefes Schwarz,
+            kosmisches Violett, leuchtende Akzente und klare moderne Flächen.
+          </p>
+          <p>
+            Inhaltlich dreht sich hier alles um meine Projekte, Experimente und
+            Werkzeuge – ohne unnötigen Ballast.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">02 / PROJEKTE</p>
+          <h2>Ausgewählte Repositories</h2>
+        </div>
+        <a class="text-link" href="https://github.com/noctherias?tab=repositories" target="_blank" rel="noreferrer">
+          Alle auf GitHub ↗
+        </a>
+      </div>
+
+      <div id="projectGrid" class="project-grid" aria-live="polite">
+        <article class="project-card loading-card">
+          <div class="card-top">
+            <span class="project-icon">✦</span>
+            <span class="project-type">Lädt …</span>
+          </div>
+          <h3>GitHub-Projekte werden geladen</h3>
+          <p>Die Seite holt deine öffentlichen Repositories automatisch von GitHub.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">03 / TECH</p>
+          <h2>Werkzeuge & Technologien</h2>
+        </div>
+      </div>
+
+      <div class="tech-grid reveal">
+        <div class="tech-pill">Python</div>
+        <div class="tech-pill">C# / .NET</div>
+        <div class="tech-pill">HTML / CSS</div>
+        <div class="tech-pill">JavaScript</div>
+        <div class="tech-pill">GitHub</div>
+        <div class="tech-pill">Automation</div>
+        <div class="tech-pill">Windows</div>
+        <div class="tech-pill">Networking</div>
+      </div>
+    </section>
+
+    <section class="section cta-section reveal">
+      <div class="cta-card">
+        <div>
+          <p class="section-kicker">04 / CONTACT</p>
+          <h2>Follow the signal.</h2>
+          <p>Neue Projekte und Updates findest du direkt auf meinem GitHub-Profil.</p>
+        </div>
+        <a class="btn btn-primary" href="https://github.com/noctherias" target="_blank" rel="noreferrer">
+          @noctherias ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>NOCTHERIAS</strong>
+      <span>Dark Cosmic Purple</span>
+    </div>
+    <p>© <span id="year"></span> Noctherias. Built in the dark.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

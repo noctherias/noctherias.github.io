@@ -1,21 +1,32 @@
-# Noctherias
+# Noctherias — Dark Cosmic Purple GitHub Page
 
-Willkommen auf meiner persönlichen GitHub-Pages-Seite.
+Eine moderne, responsive GitHub-Pages-Startseite im Dark-Cosmic-Purple-Stil.
 
-Hier findest du künftig Informationen zu meinen Projekten, Entwicklungen und weiteren Themen rund um meine Arbeit auf GitHub.
+## Dateien
 
-## Projekte
+- `index.html` – Seitenstruktur
+- `style.css` – komplettes Design
+- `script.js` – Navigation, Animationen und automatische GitHub-Projekte
 
-Auf meinem GitHub-Profil findest du meine aktuellen und vergangenen Projekte.
+## GitHub Pages
 
-➡️ [GitHub-Profil von noctherias](https://github.com/noctherias)
+Das Projekt ist für eine User Page unter:
 
-## Über diese Seite
+`https://noctherias.github.io/`
 
-Diese Website wird mit **GitHub Pages** direkt aus dem Repository `noctherias.github.io` veröffentlicht.
+gedacht.
 
-Die Seite befindet sich aktuell im Aufbau und wird laufend erweitert.
+Lege die Dateien direkt in das Repository `noctherias.github.io`.
 
----
+## Anpassungen
 
-© 2026 Noctherias
+In `script.js`:
+
+```js
+const GITHUB_USER = "noctherias";
+const MAX_PROJECTS = 6;
+```
+
+Damit kannst du GitHub-Benutzername und Anzahl Projekte ändern.
+
+Texte, Titel und Bereiche findest du direkt in `index.html`.
