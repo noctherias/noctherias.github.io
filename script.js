@@ -131,5 +131,4 @@ async function loadProjects() {
     `;
   }
 }
-
 loadProjects();
